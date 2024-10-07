@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaxQ Collective</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css"> <!-- Path to style.css in the public folder -->
+    <link rel="icon" href="./logo.png" type="image/png"> <!-- Updated path for favicon -->
+    <meta name="description" content="MaxQ Collective - Blending space exploration with modern style.">
+    <meta name="keywords" content="MaxQ Collective, Space Exploration, Rocket Launches, Space News">
+    <meta name="author" content="MaxQ Collective">
+</head>
+
+<body>
+    <header id="home" style="position: sticky; top: 0; z-index: 1000;">
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#launch-schedule">Launch Schedule</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#community">Community</a></li>
+            </ul>
+        </nav>
+        <div class="banner">
+            <img src="./logo.png" alt="MaxQ Collective Logo"> <!-- Updated path for logo -->
+            <div class="launch-summary">
+                <h1 id="mission-name">Upcoming Launch: <span id="launch-name">Loading...</span></h1>
+                <p id="rocket-name"><strong>Rocket:</strong> <span id="rocket">Loading...</span></p>
+                <p id="launch-date"><strong>Date/Time:</strong> <span id="date">Loading...</span></p>
+                <p>Countdown: <span id="main-timer">Loading...</span></p>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+        <section id="launch-schedule">
+            <h2>Launch Schedule</h2>
+            <ul id="launch-list"></ul> <!-- This will be dynamically populated -->
+        </section>
+    </main>
+
+    <footer id="footer">
+        <p>&copy; 2024 MaxQ Collective. All rights reserved.</p>
+    </footer>
+
+    <!-- Path to Webpack's bundled JS -->
+    <script src="./dist/bundle.js"></script> <!-- Path adjusted for dist/bundle.js -->
+</body>
+
+</html>

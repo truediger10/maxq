@@ -1,0 +1,371 @@
+/* Root Variables: Color scheme for the website */
+:root {
+    --lunar-rock: #7A7D7C;      /* Dark gray, used for text and background contrast */
+    --neon-blue: #00BFFF;       /* Bright blue, used for highlights and links */
+    --almost-white: #E5E5E5;    /* Light grayish white, used as the primary background */
+    --light-gray: #B3B3B3;      /* Lighter gray, used for hover states and secondary elements */
+    --mid-gray: #4F4F4F;        /* Mid-tone gray, used for medium emphasis text */
+    --dark-gray: #2E2E2E;       /* Dark gray, for deep background contrasts */
+    --space-black: #121212;     /* Near black, used for footer or very dark elements */
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Body Styles: Applies base styles to the entire page */
+body {
+    font-family: 'Roboto', Arial, sans-serif;  /* Uses Roboto font with Arial fallback */
+    background-color: var(--almost-white);     /* Light background for a clean look */
+    color: var(--lunar-rock);                  /* Primary text color */
+    margin: 0;                                 /* Removes default margin */
+    padding: 0;                                /* Removes default padding */
+}
+
+/* Hide header content when user scrolls */
+.hide-header-content {
+    opacity: 0;                                /* Make the header invisible */
+    transform: translateY(-100%);              /* Slide the header up */
+    transition: opacity 0.5s ease, transform 0.5s ease;  /* Smooth transition effect */
+}
+
+/* Reset banner transition to animate its appearance/disappearance */
+.banner {
+    transition: opacity 0.5s ease, transform 0.5s ease;  /* Smooth fade-in and fade-out */
+}
+
+/* Sticky Navigation Bar: Ensures the navigation stays at the top during scrolling */
+nav {
+    background-color: var(--almost-white);     /* Matches background color */
+    padding: 10px;                             /* Space inside the navigation */
+    position: sticky;                          /* Makes the nav stick to the top */
+    top: 0;                                    /* Keeps it at the top */
+    z-index: 1000;                             /* Ensures it's always on top of other elements */
+}
+
+/* Navigation: Flexbox layout for navigation links */
+nav ul {
+    list-style-type: none;                     /* Removes bullet points */
+    margin: 0;                                 /* No extra spacing around list */
+    padding: 0;                                /* No extra padding inside list */
+    display: flex;                             /* Flexbox for horizontal alignment */
+    justify-content: flex-start;               /* Align items to the left */
+}
+
+/* Navigation links: Spacing and color for individual links */
+nav ul li {
+    margin: 0 15px;                            /* Space between each link */
+}
+
+nav ul li a {
+    color: var(--lunar-rock);                  /* Default link color */
+    text-decoration: none;                     /* Removes underline */
+}
+
+/* Navigation hover effect: Changes link color and adds glow when hovered */
+nav ul li a:hover {
+    color: var(--neon-blue);                   /* Change color on hover */
+    font-weight: bold;                         /* Make text bold on hover */
+    text-shadow: 0px 0px 10px rgba(0, 191, 255, 0.8);  /* Blue glow effect */
+}
+
+/* Banner Styles: Centers the banner content */
+.banner {
+    text-align: center;
+    padding: 20px 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hide-banner {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+/* Banner Image: Adjusts the logo size and ensures proportional scaling */
+.banner img {
+    width: 300px;  /* Sets logo width */
+    height: auto;  /* Keeps the height proportional */
+}
+
+/* Launch Summary: Main section for displaying launch information */
+.launch-summary h1,
+.launch-summary p {
+    color: var(--lunar-rock);                  /* Text color */
+    font-size: 18px;                           /* Default text size for summary */
+    margin: 5px 0;                             /* Minimal spacing between elements */
+}
+
+/* Launch Summary Header: Larger header for launch titles */
+.launch-summary h1 {
+    font-size: 45px;                           /* Large font size for headers */
+    color: var(--lunar-rock);                  /* Matches other text */
+    font-weight: bold;                         /* Emphasizes the header */
+}
+
+/* Main Container: Adds space around main content */
+main {
+    margin: 0 45px;                            /* Adds horizontal space on the sides */
+}
+
+/* Countdown Container: Styling for countdown timers */
+.countdown-container {
+    font-size: 2rem;                           /* Large font size for countdown */
+    color: var(--neon-blue);                   /* Neon blue for emphasis */
+    font-weight: bold;                         /* Makes countdown text bold */
+    background-color: var(--almost-white);     /* Background matches page */
+    padding: 0;                                /* No padding around countdown */
+    border-radius: 0;                          /* No rounded corners */
+    box-shadow: 0px 0px 15px rgba(0, 191, 255, 0.7);  /* Soft glow around countdown */
+}
+
+/* Launch Schedule List: Ensures the launch list looks neat */
+#launch-schedule ul {
+    list-style: none;                          /* Removes bullets from the list */
+    padding: 0;                                /* No padding inside the list */
+    margin: 0;                                 /* No margin around the list */
+    height: auto;                              /* List adjusts to its content */
+    overflow: visible;                         /* Allows content to flow naturally */
+}
+
+/* Launch Item Layout: Flexbox layout for individual launch items */
+.launch-item {
+    display: flex;
+    align-items: flex-start;                   /* Aligns items at the top */
+    justify-content: space-between;            /* Spreads items across the container */
+    background-color: var(--almost-white);     /* Matches the site background */
+    padding: 20px;                             /* Adds space inside the launch item */
+    margin-bottom: 20px;                       /* Space between each launch item */
+    border-radius: 10px;                       /* Rounds the corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* Adds a soft shadow */
+    position: relative;                        /* Allows for absolute positioning inside */
+    transition: transform 0.3s ease-in-out;    /* Smooth hover effect */
+}
+
+/* Countdown positioned within the launch item */
+.countdown-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: 10px;                                /* Position countdown on the left */
+    top: 20px;                                 /* Position countdown at the top */
+    font-size: 1.5rem;                         /* Slightly smaller than main countdown */
+    color: var(--neon-blue);                   /* Stands out with blue color */
+    font-weight: bold;                         /* Bold text for emphasis */
+}
+
+/* Launch Info: Adjusts the layout of the launch information */
+.launch-info {
+    flex-grow: 1;                              /* Expands to fill available space */
+    padding-left: 8px;                         /* Adds space between countdown and text */
+}
+
+/* Hover effect for launch items */
+.launch-item:hover {
+    transform: translateY(-5px);               /* Moves the item up slightly on hover */
+    background-color: var(--light-gray);       /* Changes background to light gray */
+}
+
+/* Launch Image: Styling for images within launch items */
+.launch-image {
+    width: 400px;                              /* Set image width */
+    height: auto;                              /* Maintain aspect ratio */
+    margin-right: 5px;                         /* Space between image and text */
+    border-radius: 10px;                       /* Rounded corners for images */
+}
+
+/* Mission Header: Mission name and countdown on the same line */
+.mission-header {
+    display: flex;
+    justify-content: space-between;            /* Align text and countdown on either side */
+    align-items: center;                       /* Vertically center content */
+}
+
+/* Countdown Timer Styles: For countdown text in the header */
+.countdown-timer {
+    font-size: 1.1rem;                         /* Font size for countdown timer */
+    font-weight: bold;                         /* Bold countdown text */
+    color: var(--neon-blue);                   /* Neon blue to stand out */
+    text-align: right;                         /* Align countdown text to the right */
+}
+
+/* Launch Item Text: Styling for the launch titles */
+.launch-item h3 {
+    font-size: 1.4rem;                         /* Slightly larger font for titles */
+    color: var(--neon-blue);                   /* Neon blue to grab attention */
+    font-weight: bold;                         /* Bold titles */
+    margin-bottom: 5px;                        /* Space below title */
+}
+
+.launch-item p {
+    margin: 0;                                 /* Removes margin around paragraphs */
+    color: var(--lunar-rock);                  /* Regular text color */
+}
+
+/* Subheading Styles (Rocket & Provider): Adds style for smaller subheadings */
+.subheading {
+    font-size: 20px;                           /* Medium-sized font for subheadings */
+    font-weight: bold;                         /* Emphasizes subheadings */
+    margin-bottom: 5px;                        /* Space below subheading */
+    color: var(--lunar-rock);                  /* Matches the other text */
+}
+
+/* Sub-subheading Styles (Location Info): For even smaller subheadings */
+
+
+.sub-subheading {
+    font-size: 16px;                           /* Smaller font for location info */
+    margin-bottom: 20px;                       /* Adds space below the location text */
+}
+
+/* Description Styles (Mission/Launch Description): Standard styling for descriptions */
+.description {
+    font-size: 16px;                           /* Standard text size */
+    margin-bottom: 8px;                        /* Adds space after description */
+    color: var(--lunar-rock);                  /* Text color matches the overall theme */
+}
+
+/* Launch Window & Weather Info: Separate section for launch window and weather details */
+.launch-window, .weather-info {
+    font-size: 16px;                           /* Text size for additional info */
+    margin-bottom: 8px;                        /* Adds space between sections */
+}
+
+/* Error Message Styles: Adds emphasis to error messages */
+.error-message {
+    color: red;                                /* Makes errors stand out in red */
+    font-weight: bold;                         /* Bold text for emphasis */
+    text-align: center;                        /* Centers the error message */
+    margin-top: 20px;                          /* Adds space above the error message */
+}
+
+/* Footer: Styling for the footer section */
+footer {
+    text-align: center;                        /* Centers the footer content */
+    padding: 10px 0;                           /* Adds space above and below */
+    background-color: var(--almost-white);     /* Matches the site background */
+    color: var(--lunar-rock);                  /* Footer text color */
+}
+
+/* Responsive Design for Mobile Screens: Adjust layout for smaller screens */
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;                /* Stacks navigation links vertically */
+        align-items: center;                   /* Centers the links */
+    }
+
+    .banner img {
+        max-width: 150px;                      /* Smaller logo for mobile */
+    }
+
+    .launch-summary p {
+        font-size: 14px;                       /* Smaller font for summary */
+    }
+
+    .countdown-container {
+        font-size: 1.3rem;                     /* Adjust countdown size for mobile */
+    }
+
+    .launch-item {
+        flex-direction: column;                /* Stacks content vertically */
+        align-items: flex-start;               /* Aligns content to the left */
+    }
+
+    .launch-item img {
+        margin-bottom: 10px;                   /* Space between image and text */
+    }
+}
+
+/* Spinner Styles: For loading indicators */
+.spinner {
+    display: none;                             /* Hidden by default */
+    width: 50px;                               /* Spinner width */
+    height: 50px;                              /* Spinner height */
+    border: 5px solid #f3f3f3;                 /* Light gray border */
+    border-top: 5px solid #ff4500;             /* Orange top border */
+    border-radius: 50%;                        /* Rounded for circular spinner */
+    animation: spin 1s linear infinite;        /* Smooth rotation animation */
+    margin: auto;                              /* Centered on the page */
+}
+
+/* Keyframes for spinner animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Italics for specific mission info */
+.mission-objectives,
+.payload-info {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Styling for webcast links */
+.webcast-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #ff4500;                 /* Bright orange for emphasis */
+    color: #fff;                               /* White text */
+    text-decoration: none;                     /* Removes underline */
+    border-radius: 4px;                        /* Rounded button */
+}
+
+/* Hidden Class: Allows for elements to be hidden */
+.hidden {
+    display: none;
+}
+
+/* Expand Button: Style for buttons that reveal more content */
+.expand-button {
+    background-color: #00BFFF;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.expand-button:hover {
+    background-color: #E5E5E5;                 /* Light gray hover effect */
+}
+
+/* Launch card layout: Ensures launch cards display neatly */
+.launch-card {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+/* Rocket image styling */
+.launch-image {
+    width: 150px;                              /* Fixed width for rocket images */
+    height: auto;                              /* Maintains aspect ratio */
+    object-fit: contain;                       /* Ensures the image fits without cropping */
+    margin-right: 20px;                        /* Space between image and text */
+}
+
+/* Launch information styling */
+.launch-info {
+    flex: 1;                                   /* Ensures text fills available space */
+}
+
+/* Short description styling */
+.short-description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Expandable details styling */
+.launch-details {
+    margin-top: 10px;
+    background-color: var(--light-gray);       /* Light gray background */
+    padding: 10px;                             /* Space around details */
+    border-radius: 5px;                        /* Rounded corners */
+}
+
+/* Ensure 'Insights' text is styled properly */
+.launch-details h3 {
+    color: var(--lunar-rock);                  /* Matches text color */
+}
