@@ -1,0 +1,13 @@
+/* components/footer.css */
+
+/* Footer */
+#footer {
+  background-color: var(--almost-white);
+  color: var(--almost-white);
+  text-align: center;
+  padding: 10px 0;
+}
+
+#footer p {
+  margin: 0;
+}

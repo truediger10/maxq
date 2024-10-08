@@ -1,0 +1,23 @@
+/* layout.css */
+
+/* Main Container */
+main {
+  margin: 0 45px;
+}
+
+/* Launch Schedule List */
+#launch-schedule ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  overflow: visible;
+}
+
+/* Responsive Grid for Launch List */
+#launch-list {
+  display: block;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}

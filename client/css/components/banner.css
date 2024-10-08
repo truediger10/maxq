@@ -1,0 +1,19 @@
+/* components/banner.css */
+
+/* Banner Section */
+.banner {
+  text-align: center;
+  padding: 20px 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.banner img {
+  width: 300px;
+  height: auto;
+}
+
+/* Hide the banner when scrolling */
+.hide-banner {
+  opacity: 0;
+  transform: translateY(-100%);
+}

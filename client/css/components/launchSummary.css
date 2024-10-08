@@ -1,0 +1,24 @@
+/* components/launchSummary.css */
+
+/* Launch Summary */
+.launch-summary h1,
+.launch-summary p {
+  color: var(--lunar-rock);
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.launch-summary h1 {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+/* Countdown Container */
+.countdown-container {
+  font-size: 2rem;
+  color: var(--neon-blue);
+  font-weight: bold;
+  background-color: var(--almost-white);
+  padding: 0;
+  border-radius: 0;
+}

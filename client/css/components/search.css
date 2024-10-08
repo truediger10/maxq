@@ -1,0 +1,18 @@
+/* components/search.css */
+
+/* Search Input Styling */
+#search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#search-input:focus {
+  border-color: var(--neon-blue);
+}

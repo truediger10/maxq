@@ -1,0 +1,70 @@
+/* base.css */
+
+/* Root Variables */
+:root {
+  --lunar-rock: #7A7D7C;
+  --neon-blue: #00BFFF;
+  --almost-white: #E5E5E5;
+  --light-gray: #B3B3B3;
+  --mid-gray: #4F4F4F;
+  --dark-gray: #2E2E2E;
+  --space-black: #121212;
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Global Styles */
+body {
+  font-size: 17px;
+  line-height: 1.6;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: var(--almost-white);
+  color: var(--lunar-rock);
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--neon-blue);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--lunar-rock);
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--lunar-rock);
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--lunar-rock);
+  margin-bottom: 1rem;
+}
+
+/* Strong Text */
+strong {
+  color: var(--neon-blue);
+}
+
+/* Links */
+a {
+  color: var(--neon-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
